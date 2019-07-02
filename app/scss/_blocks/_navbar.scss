@@ -1,0 +1,121 @@
+.navbar {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  background-color: #efefef;
+
+  &-dark {
+    background-color: #4d4d4d;
+    .navbar__menu { background-color: #333; }
+    .navbar__brand { color: #fff; }
+    .navbar__link { color: #efefef; }
+    .navbar__span { border: 2px solid #eee; }
+  }
+
+  &__menu {
+    background-color: #efefef;
+    display: inline;
+    float: right;
+    font-size: 18px;
+    @include transition();
+  }
+
+  &__header { display: inline; }
+  &__brand {
+    display: inline-block;
+    font-size: 22px;
+    color: #4d4d4d;
+    padding: 10px 10px 10px 10px;
+  }
+  &__toggle {
+    display: none;
+    &-label {
+      display: inline-block;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &-icon { 
+      display: none; 
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+
+    &:not(:checked) + .navbar__menu--horizontal { 
+      left: 100%;
+    }
+    &:not(:checked) + .navbar__menu--vertical { 
+      height: 0px;
+   }
+    &:checked + .navbar__menu--horizontal {
+      left: 0;
+      overflow-y: auto;
+    }
+    &:checked + .navbar__menu--vertical {
+      height: 270px;
+      overflow-y: auto;
+    }
+  }
+
+  
+  &__span {
+    display: block;
+    position: absolute;
+    width: 25px;
+    border: 2px solid #4d4d4d;
+    border-radius: 5px;
+    
+    transform-origin: center;
+    @include transition();
+    &.top { top: 16px; left: 11px; }
+    &.middle { top: 23px; left: 11px; }
+    &.bottom { top: 30px; left: 11px; }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 11px 10px 12px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(41, 40, 40);
+    @include transition(color, .35s);
+    &:hover { color: #747474; }
+  }
+}
+
+/* Animation */
+.navbar__toggle-icon.active {
+  .navbar__span.top { transform: translateY(6px) rotate(45deg); }
+  .navbar__span.middle { opacity: 0; transform: opacity .35s ease; }
+  .navbar__span.bottom { transform: translateY(-8px) rotate(-45deg); }
+}
+@media (max-width:600px) {
+  .navbar__toggle-icon { display: inline-block; }
+  
+  .navbar__menu {
+    position: absolute;
+    display: block;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+
+    &--horizontal {
+      width: 100%;
+    }
+    &--vertical {
+      width: 100%;
+      height: 0px;
+    }
+  }
+  .navbar__link {
+    display: block;
+    width: 100%;
+  }
+}
