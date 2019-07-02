@@ -1,0 +1,103 @@
+.contacts {
+  
+  /* h3 */
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    color: $black;
+  }
+
+  &__caption {
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    & .caption-text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+
+  &__form {
+    width: calc(75% - 30px);
+    margin: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .form-content {
+      width: calc(90% - 15px);
+      margin-right: 0 15px;
+
+      & .form-label {
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      & .form-field {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid $gray;
+        padding-bottom: 10px;
+        /* For textarea */
+        resize: none;
+
+        &::placeholder {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 30px;
+          color: $gray;
+          transition: background-color .5s ease, opacity .5s ease;
+        }
+
+        &:focus {
+          outline: none;
+          border-bottom-color: $dark-gray;
+          &::placeholder {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    & .form-button {
+      width: calc(10% - 30px);
+      margin-left: 30px;
+      & .fa-custom {
+        cursor: pointer;
+        font-size: 22px;
+        color: #FFF;
+        background-color: $gray;
+        border-radius: 50%;
+        padding: 16px;
+        transition: background-color .35s ease;
+
+        &:hover {
+          background-color: darken($color: $gray, $amount: 10%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__caption {
+    width: calc(100% - 30px);
+    margin-bottom: 30px;
+  }
+
+  .contacts__form {
+    width: calc(100% - 30px);
+  }
+
+  .contacts__form .form-content {
+    width: 100%;
+  }
+
+  .contacts__form .form-button {
+    width: 100%;
+    text-align: right;
+  }
+}
