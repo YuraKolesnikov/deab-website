@@ -2,31 +2,33 @@
   height: 50px;
   width: 100%;
   position: relative;
-  background-color: #efefef;
 
-  &-dark {
-    background-color: #4d4d4d;
-    .navbar__menu { background-color: #333; }
-    .navbar__brand { color: #fff; }
-    .navbar__link { color: #efefef; }
-    .navbar__span { border: 2px solid #eee; }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__menu {
-    background-color: #efefef;
-    display: inline;
-    float: right;
+    display: flex;
     font-size: 18px;
     @include transition();
   }
 
-  &__header { display: inline; }
+  &__header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__brand {
+    cursor: pointer;
     display: inline-block;
     font-size: 22px;
     color: #4d4d4d;
-    padding: 10px 10px 10px 10px;
+    padding: 11px;
   }
+
   &__toggle {
     display: none;
     &-label {
@@ -47,8 +49,9 @@
       right: 0px;
       top: 0px;
     }
-
-    &:not(:checked) + .navbar__menu--horizontal { 
+    
+    /* TODO: Change animation to js */
+    /* &:not(:checked) + .navbar__menu--horizontal { 
       left: 100%;
     }
     &:not(:checked) + .navbar__menu--vertical { 
@@ -61,7 +64,7 @@
     &:checked + .navbar__menu--vertical {
       height: 270px;
       overflow-y: auto;
-    }
+    } */
   }
 
   
@@ -80,13 +83,14 @@
   }
 
   &__link {
-    display: inline-block;
+    font-weight: 800;
+    text-transform: uppercase;
     padding: 11px 10px 12px 10px;
-    font-weight: 500;
-    text-decoration: none;
-    color: rgb(41, 40, 40);
+    letter-spacing: 3px;
+    line-height: 16px;
+    color: $blue;
     @include transition(color, .35s);
-    &:hover { color: #747474; }
+    &:hover { color: $dark-gray; }
   }
 }
 
@@ -96,6 +100,7 @@
   .navbar__span.middle { opacity: 0; transform: opacity .35s ease; }
   .navbar__span.bottom { transform: translateY(-8px) rotate(-45deg); }
 }
+
 @media (max-width:600px) {
   .navbar__toggle-icon { display: inline-block; }
   
