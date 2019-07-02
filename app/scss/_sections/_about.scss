@@ -1,0 +1,18 @@
+.about {
+  &__item {
+    padding: 10px;
+    & .item__title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+
+    & .item__text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+}
