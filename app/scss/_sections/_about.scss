@@ -14,10 +14,24 @@
       line-height: 30px;
     }
   }
+
+  &__brands {
+    display: flex;
+    margin: 0 -15px;
+    .brands__item {
+      position: relative;
+      width: calc(100% / 5 - 30px);
+      margin: 0 15px;
+      height: 50px;
+    }
+  }
 }
 
-@media screen and (max-width: 480px) {
-  .about {
-    margin-top: 50px;
+@media screen and (max-width: 768px) {
+  .about__brands {
+    justify-content: space-between;
+    & .brands__item {
+    width: calc(100% - 30px);
+  }
   }
 }

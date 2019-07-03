@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__signature {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    color: $black;
+  }
+
+  &__links {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__link {
+    line-height: 30px;
+    color: $dark-gray;
+    transition: color .35s ease;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .footer__signature {
+    margin-bottom: 20px;
+  }
+
+  .footer__links {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footer__link {
+    margin: 10px 0;
+  }
+}
