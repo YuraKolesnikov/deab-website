@@ -9,8 +9,16 @@ body {
   font-family: 'Nunito';
 }
 
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
 /* Blocks */
 @import "_blocks/accordion";
+@import "_blocks/badge";
 @import "_blocks/dropdown";
 @import "_blocks/grid";
 @import "_blocks/modal";
@@ -23,3 +31,4 @@ body {
 @import "_sections/contacts";
 @import "_sections/hero";
 @import "_sections/links";
+@import "_sections/works";

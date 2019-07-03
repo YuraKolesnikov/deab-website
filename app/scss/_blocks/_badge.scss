@@ -1,0 +1,11 @@
+.badge {
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px 15px;
+  &--yellow {
+    background-color: $yellow;
+    color: $black;
+  }
+}
