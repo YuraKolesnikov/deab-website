@@ -17,21 +17,24 @@
 
   &__brands {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -15px;
     .brands__item {
       position: relative;
       width: calc(100% / 5 - 30px);
       margin: 0 15px;
       height: 50px;
+
+      & img {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
-  .about__brands {
-    justify-content: space-between;
-    & .brands__item {
-    width: calc(100% - 30px);
-  }
+@media screen and (max-width: 480px) {
+  .brands__item {
+    width: calc(100% / 3 - 30px) !important;
   }
 }
