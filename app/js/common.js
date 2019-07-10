@@ -24,16 +24,23 @@ $(function() {
   /* Hamburger animation */
   $('.js-hamburger').on('click', function(e) {
     $('.navbar__toggle-icon').toggleClass('active')
-    if (!$(this).prop('checked')) {
-      /* setTimeout(function() {
-        $('.navbar__menu').css('display', 'none')
-      }, 200) */
-    } else {
-      /* setTimeout(function() {
-        $('.navbar__menu').css('display', 'block')
-      }) */
-    }
+    $('.navbar__menu--mobile').slideToggle()
     console.log($('.navbar__menu--mobile'))
+  })
+
+  $('.navbar__link').on('click', function(e) {
+    e.preventDefault()
+    var destination = e.target.getAttribute('href')
+		var section = $(destination)[0]
+		section.scrollIntoView({
+			block: 'start',
+			behavior: 'smooth'
+		})
+  })
+
+  $('.navbar__menu--mobile .navbar__link').on('click', function(e) {
+    $('.navbar__toggle-icon').removeClass('active')
+    $('.navbar__menu--mobile').slideToggle()
   })
 
   /* Dropdown animation */
