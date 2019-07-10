@@ -10,21 +10,11 @@
 			content="width=device-width, initial-scale=1, maximum-scale=1"
 		/>
 		<meta property="og:image" content="path/to/image.jpg" />
-		<link
-			rel="shortcut icon"
-			href="img/favicon/favicon.ico"
-			type="image/x-icon"
-		/>
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
-		<link
-			rel="apple-touch-icon"
-			sizes="72x72"
-			href="img/favicon/apple-touch-icon-72x72.png"
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png"
 		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="114x114"
-			href="img/favicon/apple-touch-icon-114x114.png"
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"
 		/>
 		<!-- Chrome, Firefox OS and Opera -->
 		<meta name="theme-color" content="#000" />
@@ -33,17 +23,20 @@
 		<!-- iOS Safari -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
 		<!-- Icons -->
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 		<!-- Font -->
-		<link 
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&display=swap" 
-		/>
+		<link  
+			rel="preload" 
+			as="font"
+			onload="this.rel = 'stylesheet'"
+			href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&display=swap" />
 		<!-- Main stylesheet -->
-		<link rel="stylesheet" href="css/main.min.css" />
+		<link 
+			rel="preload" 
+			as="style" 
+			onload="this.rel = 'stylesheet'" 
+			href="css/main.min.css" />
 	</head>
 	<body>
 		<nav class="navbar">
@@ -172,7 +165,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="about__brands">
+				<div class="about__brands mt-5">
 					<div class="brands__item">
 						<img src="img/google.svg">
 					</div>
