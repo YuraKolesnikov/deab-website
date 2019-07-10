@@ -25,10 +25,15 @@ $(function() {
   $('.js-hamburger').on('click', function(e) {
     $('.navbar__toggle-icon').toggleClass('active')
     if (!$(this).prop('checked')) {
-      setTimeout(function() {
+      /* setTimeout(function() {
         $('.navbar__menu').css('display', 'none')
-      }, 200)
+      }, 200) */
+    } else {
+      /* setTimeout(function() {
+        $('.navbar__menu').css('display', 'block')
+      }) */
     }
+    console.log($('.navbar__menu--mobile'))
   })
 
   /* Dropdown animation */

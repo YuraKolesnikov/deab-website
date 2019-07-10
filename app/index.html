@@ -36,20 +36,20 @@
 	</head>
 	<body>
 		<nav class="navbar">
-			<div class="navbar__toggle-icon">
-				<label for="navbar__toggle" class="navbar__toggle-label">
-					<span class="navbar__span top"></span>
-					<span class="navbar__span middle"></span>
-					<span class="navbar__span bottom"></span>
-				</label>
-			</div>
-			<input
-				type="checkbox"
-				id="navbar__toggle"
-				class="navbar__toggle js-hamburger"
-			/>
+			
 			<div class="navbar__main container mt-5">
-				<div class="navbar__menu navbar__menu--horizontal">
+				<div class="navbar__toggle-icon">
+					<label for="navbar__toggle" class="navbar__toggle-label">
+						<span class="navbar__span top"></span>
+						<span class="navbar__span bottom"></span>
+						<input
+							type="checkbox"
+							id="navbar__toggle"
+							class="navbar__toggle js-hamburger"
+						/>
+					</label>
+				</div>
+				<div class="navbar__menu navbar__menu--vertical">
 					<a href="#works" class="navbar__link">
 						Works
 					</a>
@@ -62,7 +62,21 @@
 						<img src="img/main-logo.jpg" alt="Main logo" width="52" height="52">
 					</div>
 				</div>
-				<div class="navbar__menu navbar__menu--horizontal">
+				<div class="navbar__menu navbar__menu--vertical">
+					<a href="#links" class="navbar__link">
+						Links
+					</a>
+					<a href="#contacts" class="navbar__link">
+						Contacts
+					</a>
+				</div>
+				<div class="navbar__menu flex-column navbar__menu--mobile">
+					<a href="#works" class="navbar__link">
+						Works
+					</a>
+					<a href="#about" class="navbar__link">
+						About
+					</a>
 					<a href="#links" class="navbar__link">
 						Links
 					</a>
