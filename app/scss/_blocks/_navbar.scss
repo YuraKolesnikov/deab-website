@@ -11,11 +11,19 @@
 
   &__menu {
     display: flex;
-    font-size: 18px;
+    width: 20%;
+    justify-content: space-between;
 
     &--mobile {
       display: none;
       position: absolute;
+      height: 100vh;
+      z-index: 1000;
+
+      & .navbar__link {
+        font-size: 18px;
+        padding-left: 30px;
+      }
     }
   }
 
@@ -40,7 +48,7 @@
       cursor: pointer;
       width: 50px;
       height: 50px;
-      padding: 13px;
+      padding: 10px;
       margin: 0;
     }
 
@@ -48,7 +56,7 @@
       display: none; 
       position: absolute;
       height: 50px;
-      left: 0px;
+      left: 20px;
       top: 18%;
     }
     
@@ -87,6 +95,7 @@
 
   &__link {
     font-weight: 800;
+    font-size: 12px;
     text-transform: uppercase;
     padding: 11px 10px 12px 10px;
     letter-spacing: 3px;
@@ -102,6 +111,12 @@
   .navbar__span.top { transform: translateY(3px) rotate(45deg); }
   .navbar__span.middle { opacity: 0; transform: opacity .35s ease; }
   .navbar__span.bottom { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    width: 30%;
+  }
 }
 
 @media (max-width:600px) {

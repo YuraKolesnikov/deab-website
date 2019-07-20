@@ -4,5 +4,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    & .item__text {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .links__item .item__text {
+    width: 100%;
+    margin: 0;
   }
 }
